@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupLazadaActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SignupLazadaActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,9 +46,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:hint="example@gmail.com"
-            app:layout_constraintTop_toBottomOf="@+id/txtmail"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtmail" />
+
         <TextView
             android:id="@+id/txtmk"
             android:layout_width="wrap_content"
@@ -61,6 +62,7 @@
             android:textSize="15dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtusername" />
+
         <EditText
             android:id="@+id/txtpass"
             android:layout_width="fill_parent"
@@ -69,9 +71,164 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:hint="*********"
-            app:layout_constraintTop_toBottomOf="@+id/txtmk"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtmk" />
 
+        <TextView
+            android:id="@+id/txthint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="*Mật khẩu phải chưa ít nhất 6 ký tự bao gồm cả chữ và số"
+            android:textSize="13dp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtpass" />
+
+        <TextView
+            android:id="@+id/txttypeagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Nhập lại mật khẩu"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthint" />
+
+        <EditText
+            android:id="@+id/txtpassagain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:hint=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttypeagain" />
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Họ và tên"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtpassagain" />
+
+        <EditText
+            android:id="@+id/txttypename"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:hint=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtname" />
+
+        <CheckBox
+            android:id="@+id/cbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Nhận các thông tin khuyến mãi qua mail"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttypename" />
+
+        <Button
+            android:id="@+id/btnsend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/design_default_color_error"
+            android:text="Gửi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbox2" />
+
+        <TextView
+            android:id="@+id/txthint2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="*Tôi đã đọc và đông ý với các điều khoản sử dụng và chính sách bảo mật của Lazada"
+            android:textSize="13dp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnsend" />
+
+        <ImageButton
+            android:id="@+id/imgfb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/facebook"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthint2" />
+
+        <ImageButton
+            android:id="@+id/imggg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/google"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgfb" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ct2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imggg">
+
+            <Button
+                android:id="@+id/btnbtc"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:drawableTop="@drawable/money"
+                android:padding="5dp"
+                app:layout_constraintLeft_toLeftOf="@+id/btnmv"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <Button
+                android:id="@+id/btnmv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:drawableTop="@drawable/moving"
+                android:padding="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/btnbtc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnshange"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:drawableTop="@drawable/reload"
+                android:padding="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/btnmv"
+                app:layout_constraintRight_toLeftOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
